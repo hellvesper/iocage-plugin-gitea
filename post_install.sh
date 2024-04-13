@@ -28,7 +28,8 @@ else
     echo ""
 endif
 
-ln -s /root/sdk/go1.22.2/bin/go /usr/local/bin/go122
+unlink: /usr/local/bin/go
+ln -s /root/sdk/go1.22.2/bin/go /usr/local/bin/go
 set status = $status
 if ($status != 0) then
     echo "Go122 linkning failed"
@@ -40,7 +41,8 @@ else
     echo ""
 endif
 
-ln -s /root/sdk/go1.22.2/bin/gofmt /usr/local/bin/gofmt122
+unlink: /usr/local/bin/gofmt
+ln -s /root/sdk/go1.22.2/bin/gofmt /usr/local/bin/gofmt
 set status = $status
 if ($status != 0) then
     echo "gofmt122 linking failed"
