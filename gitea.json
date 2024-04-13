@@ -1,7 +1,7 @@
 {
-  "name": "giteai",
+  "name": "gitea",
   "release": "13.3-RELEASE",
-  "artifact": "https://github.com/hellvesper/iocage-plugin-h",
+  "artifact": "https://github.com/hellvesper/iocage-plugin-gitea",
   "official": false,
   "plugin_schema": "2",
   "properties": {
