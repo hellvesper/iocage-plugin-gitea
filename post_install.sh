@@ -53,22 +53,22 @@ else
 endif
 hash -r
 rehash
-# echo "Fetch and install HomeBox"
+# echo "Fetch and install gitea"
 cd /root && git clone https://github.com/go-gitea/gitea.git
 set status = $status
 if ($status != 0) then
-    echo "Homebox download failed"
+    echo "gitea download failed"
     # Optionally, exit or handle the error
     exit 1
 else
     echo ""
-    echo "Homebox download succeeded"
+    echo "gitea download succeeded"
     echo ""
 endif
 
 
-# mkdir -p /root/homebox/app
-# cd /root/homebox && cp backend/go/bin/api ./app/
+# mkdir -p /root/gitea/app
+# cd /root/gitea && cp backend/go/bin/api ./app/
 # set status = $status
 # if ($status != 0) then
 #     echo "Copy app binary failed"
@@ -80,9 +80,9 @@ endif
 #     echo ""
 # endif
 
-# cd /root/homebox && chmod +x ./app/api/
+# cd /root/gitea && chmod +x ./app/api/
 
-# cd /root/homebox && mkdir -p /root/homebox/data
+# cd /root/gitea && mkdir -p /root/gitea/data
 # set status = $status
 # if ($status != 0) then
 #     echo "Copy app binary failed"
@@ -100,9 +100,8 @@ service nginx start
 sysrc -f /etc/rc.conf mdnsresponderposix_enable=YES
 sysrc -f /etc/rc.conf mdnsresponderposix_flags="-f /usr/local/etc/mdnsresponder.conf"
 service mdnsresponderposix start
-sysrc -f /etc/rc.conf homebox_enable=YES
-sysrc -f /etc/rc.conf homebox_env="HBOX_MODE=production HBOX_STORAGE_DATA=/root/homebox/data/ HBOX_STORAGE_SQLITE_URL='/root/homebox/data/homebox.db?_pragma=busy_timeout=2000&_pragma=journal_mode=WAL&_fk=1'"
-service homebox start
+sysrc -f /etc/rc.conf gitea_enable=YES
+service gitea start
 
 
 echo "There is no default username and password, register new user with your credentials." >> /root/PLUGIN_INFO
