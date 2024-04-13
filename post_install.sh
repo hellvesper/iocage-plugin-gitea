@@ -28,7 +28,7 @@ else
     echo ""
 endif
 
-unlink: /usr/local/bin/go
+unlink /usr/local/bin/go
 ln -s /root/sdk/go1.22.2/bin/go /usr/local/bin/go
 set status = $status
 if ($status != 0) then
@@ -41,7 +41,7 @@ else
     echo ""
 endif
 
-unlink: /usr/local/bin/gofmt
+unlink /usr/local/bin/gofmt
 ln -s /root/sdk/go1.22.2/bin/gofmt /usr/local/bin/gofmt
 set status = $status
 if ($status != 0) then
