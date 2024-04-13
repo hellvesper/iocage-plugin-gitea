@@ -1,7 +1,7 @@
 {
-  "name": "homeboxi",
-  "release": "13.2-RELEASE",
-  "artifact": "https://github.com/hellvesper/iocage-plugin-homebox",
+  "name": "giteai",
+  "release": "13.3-RELEASE",
+  "artifact": "https://github.com/hellvesper/iocage-plugin-h",
   "official": false,
   "plugin_schema": "2",
   "properties": {
