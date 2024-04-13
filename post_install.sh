@@ -100,12 +100,12 @@ make build
 # endif
 
 # Define the username and other details
-username="gitea"
-fullname="gitea"
-uid=1001
-gid=1001
-home="/home/gitea"
-shell="/bin/sh"
+set username="gitea"
+set fullname="gitea"
+set uid=1001
+set gid=1001
+set home="/home/gitea"
+set shell="/bin/sh"
 
 # Create group
 /usr/sbin/pw groupadd ${username}
