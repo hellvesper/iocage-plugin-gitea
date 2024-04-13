@@ -4,7 +4,7 @@
 echo "install Gitea"
 
 # echo "Install go1.22"
-go install golang.org/dl/go1.22.0@latest
+go install golang.org/dl/go1.22.2@latest
 set status = $status
 if ($status != 0) then
     echo "Go122 install failed"
@@ -16,7 +16,7 @@ else
     echo ""
 endif
 
-/root/go/bin/go1.22.0 download
+/root/go/bin/go1.22.2 download
 set status = $status
 if ($status != 0) then
     echo "Go122 download failed"
@@ -28,7 +28,7 @@ else
     echo ""
 endif
 
-ln -s /root/sdk/go1.22.0/bin/go /usr/local/bin/go122
+ln -s /root/sdk/go1.22.2/bin/go /usr/local/bin/go122
 set status = $status
 if ($status != 0) then
     echo "Go122 linkning failed"
@@ -40,7 +40,7 @@ else
     echo ""
 endif
 
-ln -s /root/sdk/go1.22.0/bin/gofmt /usr/local/bin/gofmt122
+ln -s /root/sdk/go1.22.2/bin/gofmt /usr/local/bin/gofmt122
 set status = $status
 if ($status != 0) then
     echo "gofmt122 linking failed"
