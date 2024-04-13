@@ -1,6 +1,6 @@
 {
   "name": "gitea",
-  "release": "13.3-RELEASE",
+  "release": "13.2-RELEASE",
   "artifact": "https://github.com/hellvesper/iocage-plugin-gitea",
   "official": false,
   "plugin_schema": "2",

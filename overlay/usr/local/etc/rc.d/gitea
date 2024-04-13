@@ -13,12 +13,12 @@ load_rc_config $name
 
 : ${gitea_enable="NO"}
 
-command="/root/gitea/gitea"
+command=/home/gitea/${name}
 command_args="web"
 pidfile="/var/run/${name}.pid"
 logfile="/var/log/${name}.log"
 
-procname="${command}"
+#procname="${command}"
 
 command_interpreter="/usr/sbin/daemon"
 
@@ -30,7 +30,8 @@ gitea_start() {
     # echo "$HBOX_STORAGE_DATA"
     # echo "$HBOX_MODE"
     # echo "$HBOX_STORAGE_SQLITE_URL"
-    ${command_interpreter} -u ${name} -o ${logfile} -P ${pidfile} -- ${command} ${command_args}
+    # echo "${command_interpreter} -u ${name} -o ${logfile} -P ${pidfile} -- ${command} ${command_args}"
+    ${command_interpreter} -u ${name} -o ${logfile} -p ${pidfile} -- ${command} ${command_args}
 }
 
 gitea_stop() {
