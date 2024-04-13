@@ -27,10 +27,10 @@ stop_cmd="${name}_stop"
 
 gitea_start() {
     echo "Starting ${name}."
-    echo "$HBOX_STORAGE_DATA"
-    echo "$HBOX_MODE"
-    echo "$HBOX_STORAGE_SQLITE_URL"
-    ${command_interpreter} -o ${logfile} -P ${pidfile} -- ${command} ${command_args}
+    # echo "$HBOX_STORAGE_DATA"
+    # echo "$HBOX_MODE"
+    # echo "$HBOX_STORAGE_SQLITE_URL"
+    ${command_interpreter} -u ${name} -o ${logfile} -P ${pidfile} -- ${command} ${command_args}
 }
 
 gitea_stop() {

@@ -1,4 +1,4 @@
 {
-  "adminportal": "http://%%IP%%",
+  "adminportal": "http://gitea.local",
   "docurl": "https://docs.gitea.com"
 }

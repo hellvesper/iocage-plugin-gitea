@@ -99,6 +99,29 @@ make build
 #     echo ""
 # endif
 
+# Define the username and other details
+username="gitea"
+fullname="gitea"
+uid=1001
+gid=1001
+home="/home/gitea"
+shell="/bin/sh"
+
+# Create group
+/usr/sbin/pw groupadd ${username}
+
+# Create the user
+/usr/sbin/pw useradd ${username} -n ${fullname} -u ${uid} -g ${gid} -m -s ${shell}
+
+# Set a password for the new user
+#echo "newuser:password" | /usr/sbin/chpass
+
+# Optionally, add the user to a group
+#/usr/sbin/pw groupmod staff -m ${username}
+
+cp /root/gitea/gitea /home/gitea/
+chown gitea:gitea /home/gitea
+
 # echo "Enable nginx service"
 sysrc -f /etc/rc.conf nginx_enable=YES
 service nginx start
