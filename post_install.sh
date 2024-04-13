@@ -66,6 +66,9 @@ else
     echo ""
 endif
 
+cd /root/gitea
+setenv TAGS "bindata sqlite sqlite_unlock_notify" 
+make build
 
 # mkdir -p /root/gitea/app
 # cd /root/gitea && cp backend/go/bin/api ./app/
