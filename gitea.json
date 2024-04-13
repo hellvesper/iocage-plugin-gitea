@@ -1,0 +1,31 @@
+{
+  "name": "homeboxi",
+  "release": "13.2-RELEASE",
+  "artifact": "https://github.com/hellvesper/iocage-plugin-homebox",
+  "official": false,
+  "plugin_schema": "2",
+  "properties": {
+    "dhcp": 1
+  },
+  "pkgs": [
+    "nginx",
+    "go",
+    "git",
+    "node",
+    "npm",
+    "python",
+    "python39",
+    "py39-pip",
+    "mDNSResponder"
+  ],
+  "packagesite": "https://pkg.freebsd.org/${ABI}/latest",
+  "fingerprints": {
+    "iocage-plugins": [
+      {
+        "function": "sha256",
+        "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+      }
+    ]
+  },
+  "revision": 0
+}
