@@ -8,6 +8,7 @@
     "dhcp": 1
   },
   "pkgs": [
+    "bash",
     "nginx",
     "go",
     "git",
